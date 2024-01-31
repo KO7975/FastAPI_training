@@ -1,0 +1,34 @@
+version: '3.10'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports: 
+      - "8000:8000"
+    depends_on:
+      - db
+    networks:
+      - fastapi_network
+
+  db:
+    image: postgres:latest
+    container_name: postgres_container
+    environment:
+      POSTGRES_DB: 'fastapi'
+      POSTGRES_USER: 'postgres'
+      POSTGRES_PASSWORD: '123456'
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - fastapi_network
+
+volumes:
+  pgdata:
+
+networks:
+  fastapi_network:
+    driver: bridge
