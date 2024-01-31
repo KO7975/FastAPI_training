@@ -34,4 +34,3 @@ This project created for training base FastAPI functionality
 
 3. Open your browser and go to [link](http://localhost:8000/docs) to access the interactive API documentation (Swagger UI).
 
-    
