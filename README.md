@@ -16,11 +16,6 @@ This project created for training base FastAPI functionality
    ```bash
    git clone https://github.com/KO7975/FastAPI_training.git
 
-2. Go to project directory:
-
-    ```bash
-    cd app
-
 
 ## Usage
 
